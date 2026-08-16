@@ -1,5 +1,11 @@
 #EXTM3U
 
+#EXTINF:-1 group-title="Sports" tvg-logo="https://i.ibb.co/ymFCZq1k/images-2.jpg",UNITE 8 SPORTS 1 HD
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/callection/wc8/wc8/1532856.m3u8
+
+#EXTINF:-1 group-title="Sports" tvg-logo="https://i.ibb.co/ymFCZq1k/images-2.jpg",UNITE 8 SPORTS 2 HD
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/callection/wc8/wc8/155990.m3u8
+
 #EXTINF:-1 tvg-id="willow.alt" tvg-name="WILLOW - ALT" tvg-logo="https://i.ibb.co/M5ZPKPnP/images-3.png" group-title="Sports",beIN Sports 1
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
