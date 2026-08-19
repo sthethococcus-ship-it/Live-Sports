@@ -89,3 +89,42 @@ https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=1994b1df7dfd2e8a8d7b9bf3fb900285:22a1444b3da18e139191665b3d652835
 https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/avqlywnuzx/out/v1/aefca6420f944a9482e117f315de535f/cenc.mpd
+
+#EXTINF:-1 group-title="🌎 Sports" tvg-logo="https://i.ibb.co/nsPKFnb2/images.jpg",Sky Sports 1
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/callection/wc8/wc8/2024778.m3u8
+
+#EXTINF:-1 group-title="🌎 Sports" tvg-logo="https://i.ibb.co/nsPKFnb2/images.jpg",Sky Sports 2
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/callection/wc8/wc8/2024777.m3u8
+
+#EXTINF:-1 group-title="🌎 Sports" tvg-logo="https://i.ibb.co/nsPKFnb2/images.jpg",Sky Sports 3
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/callection/wc8/wc8/2024776.m3u8
+
+#EXTINF:-1 group-title="🌎 Sports" tvg-logo="https://i.ibb.co/nsPKFnb2/images.jpg",Sky Sports 4
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/callection/wc8/wc8/2024775.m3u8
+
+#EXTINF:-1 group-title="🌎 Sports" tvg-logo="https://i.ibb.co/nsPKFnb2/images.jpg",Sky Sports 5
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/callection/wc8/wc8/2024774.m3u8
+
+#EXTINF:-1 group-title="🌎 Sports" tvg-logo="https://i.ibb.co/nsPKFnb2/images.jpg",Sky Sports 6
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/callection/wc8/wc8/2024773.m3u8
+
+#EXTINF:-1 group-title="🌎 Sports" tvg-logo="https://i.ibb.co/nsPKFnb2/images.jpg",Sky Sports 7
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/callection/wc8/wc8/2024772.m3u8
+
+#EXTINF:-1 group-title="🌎 Sports" tvg-logo="https://i.ibb.co/nsPKFnb2/images.jpg",Sky Sports 9
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/callection/wc8/wc8/2024770.m3u8
+
+#EXTINF:-1 group-title="🌎 Sports" tvg-logo="https://i.ibb.co/nsPKFnb2/images.jpg",Sky Sports PL
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/callection/wc8/wc8/1424311.m3u8
+
+#EXTINF:-1 group-title="🌎 Sports" tvg-logo="https://i.ibb.co/nsPKFnb2/images.jpg",Sky Sports Select
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/callection/wc8/wc8/2024769.m3u8
+
+#EXTINF:-1 group-title="🌎 Sports" tvg-logo="https://i.ibb.co/0pTGW7xB/images-1.jpg",Sky Sports Main Event
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/callection/wc8/wc8/83450.m3u8
+
+#EXTINF:-1 group-title="🌎 Sports" tvg-logo="https://i.ibb.co/0pTGW7xB/images-1.jpg",Sky Sports Football
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/callection/wc8/wc8/30498.m3u8
+
+#EXTINF:-1 group-title="🌎 Sports" tvg-logo="https://i.ibb.co/0pTGW7xB/images-1.jpg",Sky Sports PL UK
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/callection/wc8/wc8/30493.m3u8
