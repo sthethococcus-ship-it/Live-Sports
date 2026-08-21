@@ -1,0 +1,92 @@
+name: Update MLS Playlist
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download and filter MLS
+        shell: python
+        run: |
+          import urllib.request
+          import time
+          import re
+
+          SOURCE = (
+              "https://raw.githubusercontent.com/Raulpa78/StoM/"
+              "refs/heads/main/output/vivo.m3u"
+              "?_=" + str(int(time.time()))
+          )
+
+          OUTPUT = "mls.m3u"
+
+          req = urllib.request.Request(
+              SOURCE,
+              headers={
+                  "User-Agent": "Mozilla/5.0",
+                  "Cache-Control": "no-cache",
+                  "Pragma": "no-cache"
+              }
+          )
+
+          with urllib.request.urlopen(req, timeout=60) as r:
+              text = r.read().decode("utf-8", errors="ignore")
+
+          lines = text.splitlines()
+          output = ["#EXTM3U"]
+          kept = 0
+          i = 0
+
+          while i < len(lines):
+              line = lines[i].strip()
+
+              if line.startswith("#EXTINF:"):
+                  match = re.search(
+                      r'group-title="([^"]*)"',
+                      line,
+                      re.IGNORECASE
+                  )
+
+                  group = match.group(1).strip() if match else ""
+
+                  if group.lower() == "mls":
+                      output.append(line)
+
+                      if i + 1 < len(lines):
+                          output.append(lines[i + 1].strip())
+
+                      kept += 1
+
+                  i += 2
+              else:
+                  i += 1
+
+          with open(OUTPUT, "w", encoding="utf-8") as f:
+              f.write("\n".join(output) + "\n")
+
+          print(f"MLS entries kept: {kept}")
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add mls.m3u
+
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update MLS playlist"
+            git push
+          fi
