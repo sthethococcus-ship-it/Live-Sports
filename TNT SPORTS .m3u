@@ -68,9 +68,6 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/dev1hjwzh9/out/v1
 #KODIPROP:inputstream.adaptive.license_key=fa34fa8c90336dd528c7a23871cad1fe:552a78d1aeb74f1650d68255c5749408
 https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/tdijwiga2k/out/v1/f5fde318678f4f7583bf27b7231bde1f/cenc.mpd
 
-#EXTINF:-1 group-title="Sports" tvg-logo="https://i.ibb.co/Q37mF9Ty/images-1.png",SKY CRICKET 
-https://bl.rutube.ru/livestream/7c13a51576b9ff2601f08f5d57dd5169/index.m3u8?s=uiXES2ePt7xTpQnbJxn7Dg&e=2074684474&scheme=https|user-agent=Mozilla
-
 #EXTINF:-1 tvg-id="willow.alt" tvg-name="WILLOW - ALT" tvg-logo="https://i.ibb.co/mV3bdZvn/images-3.png" group-title="Sports",WILLOW SPORTS
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -120,11 +117,14 @@ https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/callection/w
 #EXTINF:-1 group-title="Sports" tvg-logo="https://i.ibb.co/0p6j02y0/file-0000000056488211b8a926bb4c7cb009.png",Sky Sports Select
 https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/callection/wc8/wc8/2024769.m3u8
 
-#EXTINF:-1 group-title="Sports" tvg-logo="https://i.ibb.co/0pTGW7xB/images-1.jpg",Sky Sports Main Event
+#EXTINF:-1 group-title="Sports" tvg-logo="https://i.ibb.co/r2chtKzg/file-00000000ef5c8211869ca92daa418670.png",SKY SPORTS CRICKET 
+https://bl.rutube.ru/livestream/7c13a51576b9ff2601f08f5d57dd5169/index.m3u8?s=uiXES2ePt7xTpQnbJxn7Dg&e=2074684474&scheme=https|user-agent=Mozilla
+
+#EXTINF:-1 group-title="Sports" tvg-logo="https://i.ibb.co/r2chtKzg/file-00000000ef5c8211869ca92daa418670.png",Sky Sports Main Event
 https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/callection/wc8/wc8/83450.m3u8
 
-#EXTINF:-1 group-title="Sports" tvg-logo="https://i.ibb.co/0pTGW7xB/images-1.jpg",Sky Sports Football
+#EXTINF:-1 group-title="Sports" tvg-logo="https://i.ibb.co/r2chtKzg/file-00000000ef5c8211869ca92daa418670.png",Sky Sports Football
 https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/callection/wc8/wc8/30498.m3u8
 
-#EXTINF:-1 group-title="Sports" tvg-logo="https://i.ibb.co/0pTGW7xB/images-1.jpg",Sky Sports PL UK
+#EXTINF:-1 group-title="Sports" tvg-logo="https://i.ibb.co/r2chtKzg/file-00000000ef5c8211869ca92daa418670.png",Sky Sports PL UK
 https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/callection/wc8/wc8/30493.m3u8
