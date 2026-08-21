@@ -46,7 +46,10 @@ jobs:
               }
           )
 
-          with urllib.request.urlopen(req, timeout=60) as r:
+          with urllib.request.urlopen(
+              req,
+              timeout=60
+          ) as r:
               text = r.read().decode(
                   "utf-8",
                   errors="ignore"
@@ -54,14 +57,18 @@ jobs:
 
           lines = text.splitlines()
 
-          # Timestamp makes the file genuinely change every run
+          # IST timestamp
+          ist_time = time.strftime(
+              "%Y-%m-%d %H:%M:%S IST",
+              time.localtime(
+                  time.time() + 5 * 3600 + 30 * 60
+              )
+          )
+
+          # Timestamp forces a real file change every run
           output = [
               "#EXTM3U",
-              "# Updated: " +
-              time.strftime(
-                  "%Y-%m-%d %H:%M:%S UTC",
-                  time.gmtime()
-              )
+              f"# Updated: {ist_time}"
           ]
 
           kept = 0
@@ -121,13 +128,15 @@ jobs:
               "w",
               encoding="utf-8"
           ) as f:
-
               f.write(
                   "\n".join(output) + "\n"
               )
 
           print(
               f"MLS channels kept: {kept}"
+          )
+          print(
+              f"Updated: {ist_time}"
           )
 
       - name: Commit and push
@@ -138,6 +147,6 @@ jobs:
           git add mls.m3u
 
           git commit \
-            -m "Update MLS playlist $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+            -m "Update MLS playlist $(TZ='Asia/Kolkata' date '+%Y-%m-%d %H:%M:%S IST')"
 
           git push
