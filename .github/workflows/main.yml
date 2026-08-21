@@ -47,11 +47,23 @@ jobs:
           )
 
           with urllib.request.urlopen(req, timeout=60) as r:
-              text = r.read().decode("utf-8", errors="ignore")
+              text = r.read().decode(
+                  "utf-8",
+                  errors="ignore"
+              )
 
           lines = text.splitlines()
 
-          output = ["#EXTM3U"]
+          # Timestamp makes the file genuinely change every run
+          output = [
+              "#EXTM3U",
+              "# Updated: " +
+              time.strftime(
+                  "%Y-%m-%d %H:%M:%S UTC",
+                  time.gmtime()
+              )
+          ]
+
           kept = 0
           i = 0
 
@@ -68,16 +80,29 @@ jobs:
                   )
 
                   if match:
-                      category = match.group(1).strip().lower()
+
+                      category = (
+                          match.group(1)
+                          .strip()
+                          .lower()
+                      )
 
                       if category in CATEGORIES:
 
                           output.append(line)
 
                           if i + 1 < len(lines):
-                              stream = lines[i + 1].strip()
 
-                              if stream and not stream.startswith("#"):
+                              stream = (
+                                  lines[i + 1]
+                                  .strip()
+                              )
+
+                              if (
+                                  stream
+                                  and
+                                  not stream.startswith("#")
+                              ):
                                   output.append(stream)
                                   kept += 1
 
@@ -87,20 +112,32 @@ jobs:
                   i += 1
 
           if kept == 0:
-              raise SystemExit("ERROR: No MLS channels found!")
+              raise SystemExit(
+                  "ERROR: No MLS channels found!"
+              )
 
-          with open(OUTPUT, "w", encoding="utf-8") as f:
-              f.write("\n".join(output) + "\n")
+          with open(
+              OUTPUT,
+              "w",
+              encoding="utf-8"
+          ) as f:
 
-          print(f"MLS channels kept: {kept}")
+              f.write(
+                  "\n".join(output) + "\n"
+              )
 
-      - name: Commit every run
+          print(
+              f"MLS channels kept: {kept}"
+          )
+
+      - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add mls.m3u
 
-          git commit --allow-empty -m "Update MLS playlist $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          git commit \
+            -m "Update MLS playlist $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
 
           git push
