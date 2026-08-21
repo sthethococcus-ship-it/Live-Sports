@@ -15,8 +15,5 @@ https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/callection/w
 #EXTINF:-1 group-title="Entertainment" tvg-logo="https://i.ibb.co/xS9zZrS9/images-3.jpg",Express Entertainment
 https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/callection/wc8/wc8/281114.m3u8
 
-#EXTINF:-1 group-title="Entertainment" tvg-logo="https://i.ibb.co/7dmsvDFJ/Screenshot-2026-07-10-08-19-59-88-e0271db7d9a1e2fbb985b0b9569aa40a.jpg", Hindi Hits HD
-http://146.59.253.52:8080/hindihitshd/index.m3u8
-
 #EXTINF:-1 group-title="Entertainment" tvg-logo="https://i.ibb.co/rR0CbxQX/images.jpg",YRF Music
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8
